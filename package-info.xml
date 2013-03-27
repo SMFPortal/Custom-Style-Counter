@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+  <id>wasdman:Custom_style_counter</id>
+	<name>Custom style counter</name>
+	<version>1.0</version>
+	<type>modification</type>
+
+	<install for="2.0 - 2.0.99">
+	<readme parsebbc="true">readme.txt</readme>
+		<modification format="xml" type="file">install.xml</modification>
+	</install>
+
+	<uninstall for="2.0 - 2.0.99">
+		<modification format="xml" type="file" reverse="true">install.xml</modification>
+	</uninstall>
+</package-info>
