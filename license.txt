@@ -1,0 +1,22 @@
+SMF Coding is released under BSD license:
+
+/**
+ * Simple Machines Forum (SMF)
+ *
+ * @package SMF
+ * @author Simple Machines
+ * @copyright 2011 Simple Machines
+ * @license http://www.simplemachines.org/about/smf/license.php BSD
+ *
+ * @version 1.0
+ */
+ 
+ Unique theme code is released under BSD license.
+ 
+ /**
+ * @author WasdMan
+ * @copyright 2019-2013 smf-portal.hu
+ */
+ 
+ 
+ ___________________
