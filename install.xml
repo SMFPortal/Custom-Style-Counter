@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+  <name>Custom style counter</name>
+	<id>wasdman:custom_style_counter</id>
+	<type>modification</type>
+	<version>0.1</version>
+
+	<file name="$themedir/BoardIndex.template.php">
+		<operation>
+			<search position="replace"><![CDATA[				// Show some basic information about the number of posts, etc.
+					echo '
+					</td>
+					<td class="stats windowbg">
+						<p>', comma_format($board['posts']), ' ', $board['is_redirect'] ? $txt['redirects'] : $txt['posts'], ' <br />
+						', $board['is_redirect'] ? '' : comma_format($board['topics']) . ' ' . $txt['board_topics'], '
+						</p>
+					</td>
+					<td class="lastpost">';]]></search>
+			<add><![CDATA[				// Show some basic information about the number of posts, etc.
+                    echo '
+                    </td>
+                    <td class="stats windowbg">
+                        <p><span class="custom_sc">', comma_format($board['posts']), ' ', $board['is_redirect'] ? $txt['redirects'] : $txt['posts'], ' </span><br />
+                        <span class="custom_sc">', $board['is_redirect'] ? '' : comma_format($board['topics']) . ' ' . $txt['board_topics'], '
+                        </span></p>
+                    </td>
+                    <td class="lastpost">';]]></add>
+		</operation>
+	</file>
+	
+	<file name="$themedir/css/index.css">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+/*Custom style counter*/
+
+.custom_sc{
+    background: none repeat scroll 0 0 #788a9e;
+    border: 1px solid #788a9e;
+    border-radius: 5px;
+    color: #FFF;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 10px 0 0;
+    padding: 4px 10px;
+    text-shadow: 0 1px 0 #000;
+}
+
+/*Custom style counter*/
+
+]]></add>
+		</operation>
+	</file>
+
+</modification>
